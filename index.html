@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advice-O-Tron 5000</title>
+</head>
+
+<body>
+  <header class="main-head">
+    <h1>Advice-O-Tron 5000 <span>advice when you need it</span></h1>
+  </header>
+  <article class="content">
+    <h2>Here is some advice...</h2>
+    <p id="advice"></p>
+    <a href="#" id="tweet-button" target="_blank"><button>Tweet</button></a>
+  </article>
+  <aside class="side">
+    <h2>Why use Advice-O-Tron 5000?</h2>
+    <section>
+      <h3>Reason #1</h3>
+      <p>Find yourself stranded alone somewhere and need advice? You're in luck!</p>
+    </section>
+    <section>
+      <h3>Reason #2</h3>
+      <p>Random advice is always better than no advice at all.</p>
+    </section>
+    <section>
+      <h3>Reason #3</h3>
+      <p>It's scientifically proven that giving random advice is a lot easier than taking advice.</p>
+    </section>
+  </aside>
+  <footer class="main-footer">
+    <p>A freeCodeCamp Chicago Local Study Group jam.</p>
+  </footer>
+
+
+  <script>
+    "use strict";
+
+    fetch('https://api.adviceslip.com/advice')
+      .then((response) => {
+        console.log('Response: ', response);
+        return response.json();
+      })
+      .then((data) => {
+        const tweetURL = 'https://twitter.com/intent/tweet?text=';
+        const adviceText = data.slip.advice;
+        const adviceElement = document.getElementById("advice");
+        const tweetButton = document.getElementById("tweet-button");
+
+        adviceElement.innerText = adviceText;
+        tweetButton.attributes.href.value = tweetURL + encodeURIComponent(adviceText);
+
+        console.log('API JSON Data: ', data);
+        console.log('Advice: ', adviceText)
+      });
+
+    console.log('Hello!');
+  </script>
+</body>
+
+</html>
