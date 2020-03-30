@@ -56,10 +56,15 @@ font-family: 'Comfortaa', cursive;
 
 html,
 body {
-  /* TODO why doesn't body respect min-height whereas html does */
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
   height: 100%;
   min-height: 100%;
   font-family: "Comfortaa", cursive;
+  font-weight: 300;
   background: var(--secondary-color);
   color: var(--main-text-color);
 }
