@@ -244,6 +244,10 @@ section {
 }
 
 .tweet-button {
+  z-index: 1;
+}
+
+.tweet-button > button {
   padding: var(--default-padding);
   width: 100%;
   border-radius: 1em;
@@ -308,6 +312,7 @@ section {
   min-height: 100%;
   background-image: url("metal-tile.jpg");
   filter: opacity(0.1);
+  z-index: 0;
 }
 
 .main-head::before {
