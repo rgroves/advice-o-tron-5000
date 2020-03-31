@@ -58,6 +58,7 @@ html,
 body {
   height: 100%;
   min-height: 100%;
+  background: var(--tertiary-color);
 }
 
 body {
@@ -65,7 +66,6 @@ body {
   min-height: 100%;
   font-family: "Comfortaa", cursive;
   font-weight: 300;
-  background: var(--secondary-color);
   color: var(--main-text-color);
 }
 
@@ -86,6 +86,7 @@ p {
 .content {
   grid-area: content;
   text-align: center;
+  background: var(--secondary-color);
 }
 
 .side {
@@ -96,6 +97,7 @@ p {
 .main-footer {
   grid-area: footer;
   font-size: 0.75em;
+  background: var(--secondary-color);
 }
 
 .wrapper {
