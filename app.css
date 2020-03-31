@@ -160,7 +160,15 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.content > h2 {
+  vertical-align: bottom;
+}
+
+.content > .advice-container {
+  justify-self: center;
 }
 
 .side > section {
