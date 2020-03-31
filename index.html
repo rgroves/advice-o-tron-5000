@@ -56,7 +56,6 @@
 
     fetch('https://api.adviceslip.com/advice')
       .then((response) => {
-        console.log('Response: ', response);
         return response.json();
       })
       .then((data) => {
@@ -67,9 +66,6 @@
 
         adviceElement.innerText = adviceText;
         tweetButton.attributes.href.value = tweetURL + encodeURIComponent(adviceText);
-
-        console.log('API JSON Data: ', data);
-        console.log('Advice: ', adviceText)
       });
   </script>
   <script src="https://kit.fontawesome.com/3b99e5aa80.js" crossorigin="anonymous"></script>
