@@ -72,7 +72,11 @@ body {
 .main-head,
 .content,
 .side,
-.main-footer,
+.main-footer {
+  padding: var(--default-padding);
+  border: 5px solid var(--tertiary-color);
+}
+
 p {
   padding: var(--default-padding);
 }
@@ -81,23 +85,28 @@ p {
   grid-area: header;
   text-align: center;
   background-color: var(--primary-color);
+  border-radius: 0 0 2em 2em;
 }
 
 .content {
   grid-area: content;
   text-align: center;
+  border-radius: 2em;
   background: var(--secondary-color);
 }
 
 .side {
   grid-area: sidebar;
   background-color: var(--primary-color);
+  border-radius: 2em;
 }
 
 .main-footer {
   grid-area: footer;
   font-size: 0.75em;
   background: var(--secondary-color);
+  border-radius: 2em 2em 0 0;
+  border: 1px gray solid;
 }
 
 .wrapper {
@@ -129,9 +138,7 @@ h2 {
   padding: 0.75em 0;
 }
 
-p {
-  font-weight: 300;
-}
+/*h3 here*/
 
 .advice-container {
   margin: 1.5em auto;
