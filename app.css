@@ -254,3 +254,36 @@ section {
   position: relative;
   top: -5em;
 }
+
+.main-footer p {
+  margin: var(--default-padding) 0;
+  padding: 0 var(--default-padding);
+}
+
+.main-footer a {
+  outline: none;
+  padding: 2px 1px 0;
+}
+
+.main-footer a:link {
+  color: var(--main-text-color);
+}
+
+.main-footer a:visited {
+  color: var(--main-text-color);
+}
+
+.main-footer a:focus {
+  border-bottom: 1px solid;
+  color: var(--main-text-color);
+}
+
+.main-footer a:hover {
+  border-bottom: 1px solid;
+  background: var(--tertiary-color);
+}
+
+.main-footer a:active {
+  background: var(--tertiary-color);
+  color: var(--main-text-color);
+}
