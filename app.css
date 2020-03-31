@@ -41,11 +41,6 @@ img {
 /*******************************************************************************
 *** App Rules
 *******************************************************************************/
-/* 
-font-family: 'Sriracha', cursive;
-font-family: 'Comfortaa', cursive;
-*/
-
 :root {
   --default-padding: 1.5em;
   --primary-color: #3e3e46;
@@ -179,14 +174,3 @@ h3 {
   border-radius: 1em;
   font-size: 1em;
 }
-
-/* 
-html {
-  border: 2px solid red;
-}
-body {
-  border: 4px solid purple;
-}
-.wrapper {
-  border: 2px solid blue;
-} */
