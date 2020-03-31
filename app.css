@@ -48,6 +48,7 @@ img {
   --tertiary-color: #646157;
   --accent-color: gray;
   --main-text-color: #fff;
+  --twitter-color: #1b95e0;
 }
 
 html,
@@ -223,35 +224,18 @@ section {
   }
 }
 
-@media (min-width: 768px) {
-  .side > section {
-    max-width: 60%;
-  }
-
-  .advice-container {
-    max-width: 80%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .wrapper {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .advice-container {
-    max-width: 60%;
-  }
+.tweet-button-container {
+  z-index: 5;
+  align-self: stretch;
 }
 
 .tweet-button {
-  z-index: 1;
-}
-
-.tweet-button > button {
-  padding: var(--default-padding);
+  background: var(--twitter-color);
+  padding: 1.5em;
   width: 100%;
   border-radius: 1em;
   font-size: 1em;
+  border: none;
 }
 
 .main-head {
@@ -326,4 +310,28 @@ section {
 
 .main-footer::before {
   border-radius: 2em 2em 0 0;
+}
+
+@media (min-width: 768px) {
+  .side > section {
+    max-width: 60%;
+  }
+
+  .advice-container {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .advice-container {
+    max-width: 60%;
+  }
+
+  .tweet-button {
+    width: 50%;
+  }
 }
