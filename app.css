@@ -46,6 +46,7 @@ img {
   --primary-color: #3e3e46;
   --secondary-color: #202624;
   --tertiary-color: #646157;
+  --accent-color: gray;
   --main-text-color: #fff;
 }
 
@@ -62,6 +63,7 @@ body {
   font-family: "Comfortaa", cursive;
   font-weight: 300;
   color: var(--main-text-color);
+  margin: 0 1.5em;
 }
 
 .main-head,
@@ -81,6 +83,9 @@ p {
   text-align: center;
   background-color: var(--primary-color);
   border-radius: 0 0 2em 2em;
+  border: 1px var(--accent-color) solid;
+  box-shadow: inset 0.5em 0.5em 1rem 0.75rem rgba(0, 0, 0, 0.3),
+    0.5em 0.5em 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .content {
@@ -88,12 +93,19 @@ p {
   text-align: center;
   border-radius: 2em;
   background: var(--secondary-color);
+  border: 1px var(--accent-color) solid;
+  box-shadow: inset 0.5em 0.5em 1rem 0.75rem rgba(0, 0, 0, 0.3),
+    0.5em 0.5em 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .side {
   grid-area: sidebar;
+  text-align: center;
   background-color: var(--primary-color);
   border-radius: 2em;
+  border: 1px var(--accent-color) solid;
+  box-shadow: inset 0.5em 0.5em 1rem 0.75rem rgba(0, 0, 0, 0.3),
+    0.5em 0.5em 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .main-footer {
@@ -101,11 +113,14 @@ p {
   font-size: 0.75em;
   background: var(--secondary-color);
   border-radius: 2em 2em 0 0;
-  border: 1px gray solid;
+  border: 1px var(--accent-color) solid;
+  box-shadow: inset 0.5em 0.5em 1rem 0.75rem rgba(0, 0, 0, 0.3),
+    0.5em 0.5em 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .wrapper {
   display: grid;
+  gap: var(--default-padding);
   grid-template-areas:
     "header"
     "content"
@@ -128,12 +143,13 @@ h1 span {
   font-size: 0.5em;
 }
 
-h2 {
+h2,
+h3 {
   font-weight: 700;
   padding: 0.75em 0;
 }
 
-h3 {
+h4 {
   font-family: "Sriracha", cursive;
   padding: 0.25em 0;
 }
@@ -151,8 +167,8 @@ section {
   background: var(--tertiary-color);
   border-radius: 0.5em;
   margin: 1.5em;
-  box-shadow: 0.5em 0.5em 0.5rem rgba(255, 255, 255, 0.1);
-  border: 1px gray solid;
+  box-shadow: 0.5em 0.5em 0.5rem rgba(0, 0, 0, 0.3);
+  border: 1px var(--accent-color) solid;
 }
 
 .side > section:nth-of-type(1n) {
@@ -162,12 +178,16 @@ section {
   transform: rotate(2deg);
 }
 
-.side > section > h3 {
+.side > section > h4 {
   width: 100%;
   text-align: center;
   border-radius: 0.5em 0.5em 0 0;
   background-color: var(--secondary-color);
   border-bottom: 0.5em double var(--primary-color);
+}
+
+.side > section p {
+  border-bottom: 0.5em double var(--secondary-color);
 }
 
 .advice-container {
@@ -199,11 +219,19 @@ section {
   .side > section {
     max-width: 60%;
   }
+
+  .advice-container {
+    max-width: 80%;
+  }
 }
 
 @media (min-width: 1100px) {
   .wrapper {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .advice-container {
+    max-width: 60%;
   }
 }
 
